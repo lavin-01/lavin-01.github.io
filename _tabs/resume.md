@@ -1,7 +1,6 @@
 ---
 # the default layout is 'page'
 icon: fas fa-user-tie
-title: Resume
 order: 6
 ---
 
