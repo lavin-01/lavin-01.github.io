@@ -28,34 +28,11 @@ Welcome to my **Cybersecurity Portfolio**, a collection of projects, write-ups, 
 
 ---
 
-### 📂 Portfolio Contents  
-- **Write-ups** – Capture The Flag (CTF) challenges and labs.  
-- **Scripts & Tools** – custom security scripts for automation and testing.  
-- **Case Studies** – real-world styled penetration testing reports and methodologies.  
-- **Research** – documentation of security concepts, exploits, and mitigations.  
-
----
 
 ### 🎯 Purpose  
 This portfolio demonstrates my **practical cybersecurity expertise** and commitment to continuous learning in offensive and defensive security. It’s meant to showcase my work to potential employers, collaborators, and the InfoSec community.  
 
 
-### 👨‍💻 About Me  
-
-I am a **Cybersecurity Analyst & Penetration Tester** with a passion for securing digital environments and uncovering vulnerabilities before attackers do. My journey in cybersecurity is fueled by curiosity, continuous learning, and hands-on problem solving.  
-
-I specialize in:  
-- Conducting **penetration tests** on web, network, and mobile applications.  
-- Performing **vulnerability assessments** and developing mitigation strategies.  
-- Simulating adversarial behavior through **red teaming**.  
-- Leveraging **threat analysis and incident response** skills to detect, analyze, and respond to security incidents.  
-- Building and automating **security tools** using Python, Bash, and PowerShell.  
-
-Outside of technical work, I enjoy solving **Capture The Flag (CTF) challenges**, exploring **exploit development**, and sharing knowledge with the InfoSec community.  
-
-My ultimate goal is to contribute to a **safer cyberspace** by applying offensive security techniques to strengthen defenses.  
-
----
 
 ### ✅ Conclusion  
 
