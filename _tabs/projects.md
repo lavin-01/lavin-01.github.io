@@ -2,7 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-code-branch
 title: Projects
-order: 7
+order: 3
 ---
 
 # Malaria Prediction Model with AI
