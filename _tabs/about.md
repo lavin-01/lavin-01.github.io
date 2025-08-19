@@ -12,7 +12,7 @@ Welcome to my **Cybersecurity Portfolio**, a collection of projects, write-ups, 
 
 ---
 
-### 🔍 Focus Areas  
+### Focus Areas  
 - **Penetration Testing** – Web, Network, and Mobile application assessments.  
 - **Threat Analysis & Incident Response** – detection, analysis, and mitigation of cyber threats.  
 - **Vulnerability Research** – identifying and exploiting weaknesses responsibly.  
@@ -21,7 +21,7 @@ Welcome to my **Cybersecurity Portfolio**, a collection of projects, write-ups, 
 
 ---
 
-### 🛠️ Tools & Technologies  
+### Tools & Technologies  
 - **Pentesting:** Burp Suite, Metasploit, Nmap, Wireshark, OWASP ZAP  
 - **OSINT & Recon:** Maltego, Shodan, Recon-ng  
 - **Scripting & Automation:** Python, Bash, PowerShell  
@@ -30,12 +30,12 @@ Welcome to my **Cybersecurity Portfolio**, a collection of projects, write-ups, 
 ---
 
 
-### 🎯 Purpose  
+### Purpose  
 This portfolio demonstrates my **practical cybersecurity expertise** and commitment to continuous learning in offensive and defensive security. It’s meant to showcase my work to potential employers, collaborators, and the InfoSec community.  
 
 
 
-### ✅ Conclusion  
+### Conclusion  
 
 This portfolio reflects my journey as a **Cybersecurity Analyst & Penetration Tester**, showcasing the skills, tools, and experiences I’ve gained through hands-on projects, research, and continuous learning.  
 
