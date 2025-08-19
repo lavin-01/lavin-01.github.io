@@ -1,3 +1,11 @@
+---
+# the default layout is 'page'
+icon: fas fa-info-circle
+title: Resume
+order: 6
+---
+
+
 #  Sharon Lavin Akinyi
 ## IT & Networking Professional | Cybersecurity Enthusiast | Cisco Certified Ethical Hacker
 +254-703-665-612 | sharonlavin01@gmail.com |https://www.linkedin.com/in/sharonlavin/
