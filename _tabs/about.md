@@ -7,7 +7,7 @@ order: 1
 
 ### INTRODUCTION  
 
-Welcome to my **Cybersecurity Portfolio**, a collection of projects, write-ups, and resources that demonstrate my skills as a **Cybersecurity Analyst & Penetration Tester**. This portfolio highlights my hands-on experience in threat analysis, penetration testing, vulnerability assessment, and ethical hacking.  
+Welcome to my **Portfolio**, a collection of projects, write-ups, and resources that demonstrate my skills as a **Cybersecurity Analyst & Penetration Tester**. This portfolio highlights my hands-on experience in threat analysis, penetration testing, vulnerability assessment, and ethical hacking.  
 ![My Portfolio](assets/images/blog_image.jpg)
 
 ---
