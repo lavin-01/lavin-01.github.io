@@ -7,7 +7,118 @@ categories: [WEB, Cryptography, Easy, KenyaCyberlympics]
 tags: [WEB, Cryptography, Easy, KenyaCyberlympics]
 ---
 
-# FOWSNIFF CTF 
-## Task 1: Deploy the machine
-he first step was to deploy the machine and connect to their network using OpenVPN because I used VPN. You can choose to use the Attack box as well, it is easier if you find it hard to connect to VPN.  When connecting using OpenVPN, root privileges are required hence the use of sudo command. The full command is: sudo openvpn <filename.ovpn>
+# Fowsniff CTF
 
+**Task 1: Deploy the machine**
+
+The first step was to deploy the machine and connect to their network using OpenVPN because I used VPN. You can choose to use the Attack box as well, it is easier if you find it hard to connect to VPN.  When connecting using OpenVPN, root privileges are required hence the use of sudo command. The full command is: sudo openvpn <*filename.ovpn*>
+
+![image.png](image.png)
+
+The next thing was to ping the machine’s IP address ‘10.10.213.180’. The IP addresses will vary depending on the machine deployed. I did not get any results probably because the system and its firewalls are configured to block ICMP echoes.
+
+**Task 2: Using Nmap scan the machine. What ports are open?**
+
+So I used Nmap to scan for open ports. The command used is: nmap -A -sV <*IP Address*> The open ports found were: 22/tcp, 80/tcp, 110/tcp and 143/tcp for ssh, http, pop3 and imap respectively
+
+![image.png](image%201.png)
+
+**Task 3: Using Google to find publicly available information about the IP address**
+
+Using google, I searched the IP address,  found the website related to the IP address called *Fowsniff Corp.*
+
+![image.png](a58b8446-0d85-4a1a-8e43-37d628060c77.png)
+
+There is also a github account  called [https://github.com/berzerk0/Fowsniff](https://github.com/berzerk0/Fowsniff) this account has a file called fowsniff.txt which has fowsniff corp password leaks.
+
+[https://github.com/berzerk0/Fowsniff](https://github.com/berzerk0/Fowsniff)
+
+![image.png](image%202.png)
+
+I decoded the passwords using password cracker tools called Hashkiller and crackstation. Feel free to use any password cracker of your choice. Here are the results:
+
+1. mauer@fowsniff: 8a28a94a588a95b80163709ab4313aa4- mailcall
+2. mustikka@fowsniff: ae1644dac5b77c0cf51e0d26ad6d7e56- bilbo101
+3. tegel@fowsniff:1dc352435fecca338acfd4be10984009- apple01
+4. baksteen@fowsniff:19f5af754c31f1e2651edde9250d69bb- skyler22
+5. seina@fowsniff:90dc16d47114aa13671c697fd506cf26- scoobydoo2
+6. stone@fowsniff:a92b8a29ef1183192e3d35187e0cfabd- 
+7. mursten@fowsniff:0e9588cb62f4b6f27e33d449e2ba0b3b- carp4ever
+8. parede@fowsniff:4d6e42f56e127803285a0a7649b5ab11- orlando12
+9. sciana@fowsniff:f7fd98d380735e859f8b2ffbbede5a7e- 07011972
+
+**Task 4: Brute force POP3 login using Metasploit**
+
+I first created two files named users.txt and password.txt using nano text editor
+
+![image.png](7048675b-44b2-4c0b-a8eb-2e47ca649f67.png)
+
+![image.png](62f20399-344e-433a-9f99-7b38dc47a81d.png)
+
+Since the instructions are to brute force pop3 login, I searched for POP3 login utility and here we are going to use the 3rd option: auxiliary/scanner/pop3/pop3_login. 
+
+![image.png](image%203.png)
+
+The next command should be use 3
+
+![image.png](image%204.png)
+
+Now, set our target machine as the remote host, password.txt as the PASS_FILE and users.txt as the USER_FILE. the commands are as follows:
+
+1. set rhosts <IP Address>
+2. set USER_FILE users.txt
+3. set PASS_FILE password.txt
+
+After setting these files, execute the run command 
+
+![image.png](image%205.png)
+
+**Task 5: What is Seina’s password to the email server?** 
+
+![image.png](image%206.png)
+
+Seina’s password is scoobydoo2
+
+**Task 6: Login to POP3 mail server using Seina’s username and password and read the emails**
+
+![image.png](6522108c-e0f5-40bf-a99d-40a29aaab2e8.png)
+
+using nc and the host address and pop3 port 110, I logged in using the username seina and password scoobydoo2. We can see there are two messages: 1622 and 1280.
+
+We can use the command RTR <message> to read the contents of the emails
+
+1. The first message:
+
+ 
+
+![image.png](ccf25e62-08bd-4864-b31c-bcbc9d0ae008.png)
+
+1. The second message doesnt seem to have a lot of insight but we see that some people might have not yet changed their email passwords as advised 
+
+![image.png](07aaeab0-7df3-4135-b8ba-b8e9e621ea66.png)
+
+**Task 7: The temporary email password Seina was given**
+
+SSH password: S1ck3nBluff+secureshell
+
+**Task 8:  Who sent the email? Using the password from the previous task and the username, connect to the machine using SSH**
+
+![image.png](image%207.png)
+
+using the emailer sender: baksteen and the password: S1ck3nBluff+secureshell, I logged into the machine.
+
+**Task 9: What group does the user belong to.? Are there files that can be run by that group?**
+
+![image.png](image%208.png)
+
+Using the command id, we get to know the user id and the group that the current user belongs to. Baksteen belongs to the users group, and therefore doesn't have root privileges.
+
+Using the command: find / -group users -type f 2>/dev/null we search the whole system for file types only that belong to the group users and redirect any error messages to /dev/null so that it doesn't clutter the output with error messages
+
+![image.png](image%209.png)
+
+We find an interesting file named [cube.sh](http://cube.sh) that can be edited by the group members in users group. 
+
+**Task 9: Include a reverse shell script in the file** 
+
+The file in question is called [cube.sh](http://cube.sh)
