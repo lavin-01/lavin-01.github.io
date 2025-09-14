@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-user-tie
-order: 2
+order: 3
 ---
 
 # Sharon Lavin Akinyi
