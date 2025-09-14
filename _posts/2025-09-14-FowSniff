@@ -9,5 +9,5 @@ tags: [WEB, Cryptography, Easy, KenyaCyberlympics]
 
 # FOWSNIFF CTF 
 ## Task 1: Deploy the machine
-
+he first step was to deploy the machine and connect to their network using OpenVPN because I used VPN. You can choose to use the Attack box as well, it is easier if you find it hard to connect to VPN.  When connecting using OpenVPN, root privileges are required hence the use of sudo command. The full command is: sudo openvpn <filename.ovpn>
 
