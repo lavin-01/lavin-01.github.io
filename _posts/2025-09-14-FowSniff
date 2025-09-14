@@ -1,11 +1,13 @@
 ---
-title: "KenyaCyberlympics"
+title: "FOWSNIFF CTF CHALLENGE"
 date: 2025-09-014 01:09:33 +0300
 description: FowSniff CTF Challenge
-image: /assets/images/blog_image.jpg
+image: /assets/images/cover.webp
 categories: [WEB, Cryptography, Easy, KenyaCyberlympics]
 tags: [WEB, Cryptography, Easy, KenyaCyberlympics]
 ---
 
-# Heading 1
-This is a test post. Sam is an ASS
+# FOWSNIFF CTF 
+## Task 1: Deploy the machine
+
+
