@@ -137,7 +137,6 @@ For this task, log in using the admin email address then right click the web pag
 
 There are several results containing the word "admin" but we are specifically looking for "path: administration". This hints towards a page called "/#/administration"
 
-![image.png](/assets/images/OWASP/administration-page.png)
 
 ![image.png](/assets/images/OWASP/admin-inspect-result-2.png)
 
